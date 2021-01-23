@@ -1,1 +1,193 @@
 
+2021-01-24 00:13:39,910 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:13:54,834 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:14:31,882 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:14:59,832 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:15:11,741 ERROR: Exception on /venues [GET] [in /Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2645, in _determine_joins
+    self.primaryjoin = join_condition(
+  File "<string>", line 2, in join_condition
+  File "<string>", line 2, in _join_condition
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/util/deprecations.py", line 139, in warned
+    return fn(*args, **kwargs)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/sql/selectable.py", line 976, in _join_condition
+    raise exc.NoForeignKeysError(
+sqlalchemy.exc.NoForeignKeysError: Can't find any foreign key relationships between 'venues' and 'shows'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/routes.py", line 39, in venues
+    places = Venue.query.distinct(Venue.city, Venue.state).all()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_sqlalchemy/__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 1352, in _configure_all
+    configure_mappers()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 3299, in configure_mappers
+    mapper._post_configure_properties()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 1965, in _post_configure_properties
+    prop.init()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/interfaces.py", line 197, in init
+    self.do_init()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2078, in do_init
+    self._setup_join_conditions()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2151, in _setup_join_conditions
+    self._join_condition = jc = JoinCondition(
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2534, in __init__
+    self._determine_joins()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2667, in _determine_joins
+    util.raise_(
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+sqlalchemy.exc.NoForeignKeysError: Could not determine join condition between parent/child tables on relationship Venue.shows - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.
+2021-01-24 00:15:42,566 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:15:52,915 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:16:25,807 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:16:57,825 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:17:03,631 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:17:21,875 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:17:31,445 ERROR: Exception on /venues/create [GET] [in /Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/routes.py", line 118, in create_venue_form
+    form = VenueForm()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/form.py", line 274, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/form.py", line 131, in process
+    field.process(formdata)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/csrf/core.py", line 43, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2021-01-24 00:18:01,026 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:18:03,597 ERROR: Exception on /venues/create [GET] [in /Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/routes.py", line 118, in create_venue_form
+    form = VenueForm()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/form.py", line 274, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/form.py", line 131, in process
+    field.process(formdata)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/csrf/core.py", line 43, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2021-01-24 00:19:07,083 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:19:09,484 ERROR: Exception on /venues/create [GET] [in /Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/routes.py", line 118, in create_venue_form
+    form = VenueForm()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/form.py", line 274, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/form.py", line 131, in process
+    field.process(formdata)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/wtforms/csrf/core.py", line 43, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2021-01-24 00:21:18,566 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:42:49,369 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:43:29,078 ERROR: Exception on /venues/create [POST] [in /Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/nikosdalgiannakis/code/fyyur_01/routes.py", line 143, in create_venue_submission
+    flash(f'Error validating new entry: {str(msg)}')
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/helpers.py", line 423, in flash
+    session["_flashes"] = flashes
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/werkzeug/local.py", line 350, in __setitem__
+    self._get_current_object()[key] = value
+  File "/Users/nikosdalgiannakis/code/fyyur_01/venv/lib/python3.9/site-packages/flask/sessions.py", line 102, in _fail
+    raise RuntimeError(
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2021-01-24 00:45:21,089 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]
+2021-01-24 00:47:21,022 INFO: errors [in /Users/nikosdalgiannakis/code/fyyur_01/app.py:31]

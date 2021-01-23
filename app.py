@@ -7,7 +7,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import logging
 from logging import Formatter, FileHandler
-from fyyur_01.config import SQLALCHEMY_DATABASE_URI
 import sys
 
 #----------------------------------------------------------------------------#
@@ -20,7 +19,6 @@ app.config.from_object('fyyur_01.config')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 
 if not app.debug:
     file_handler = FileHandler('error.log')
