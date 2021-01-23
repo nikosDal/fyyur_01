@@ -1,9 +1,9 @@
-from starter_code.app import app, db
-from starter_code.models import Venue, Show, Artist
+from fyyur_01.app import app, db
+from fyyur_01.models import Venue, Show, Artist
 from datetime import datetime
 from flask import Flask, render_template, request, Response, flash, redirect, url_for
 from flask_wtf import Form
-from starter_code.forms import ShowForm, VenueForm, ArtistForm
+from fyyur_01.forms import ShowForm, VenueForm, ArtistForm
 import babel
 
 #----------------------------------------------------------------------------#

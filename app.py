@@ -7,7 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import logging
 from logging import Formatter, FileHandler
-from starter_code.config import SQLALCHEMY_DATABASE_URI
+from fyyur_01.config import SQLALCHEMY_DATABASE_URI
 import sys
 
 #----------------------------------------------------------------------------#
@@ -16,7 +16,7 @@ import sys
 
 app = Flask(__name__)
 moment = Moment(app)
-app.config.from_object('starter_code.config')
+app.config.from_object('fyyur_01.config')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 

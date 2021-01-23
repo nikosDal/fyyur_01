@@ -1,3 +1,3 @@
-import starter_code.config
-from starter_code.app import app, db
-import starter_code.routes
+import fyyur_01.config
+from fyyur_01.app import app, db
+import fyyur_01.routes

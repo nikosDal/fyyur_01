@@ -1,4 +1,4 @@
-from starter_code.app import db
+from fyyur_01.app import db
 from datetime import datetime
 #----------------------------------------------------------------------------#
 # Models.
